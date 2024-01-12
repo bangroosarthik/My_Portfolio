@@ -5,7 +5,7 @@ import Parallax from "./components/parallax/Parallax";
 import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import Cursor from "./components/cursor/cursor";
+import Cursor from "./components/cursor/Cursor";
 const App = () => {
   return <div>
       <Cursor />
