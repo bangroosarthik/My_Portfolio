@@ -35,6 +35,9 @@
                 font-size: 30px;
             }
         }
+        h1:hover{
+            color: gold;
+        }
 
         h2{
             @include mobile{

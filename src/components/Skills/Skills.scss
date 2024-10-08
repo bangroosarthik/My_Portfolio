@@ -1,82 +1,85 @@
-@import "../../App.scss";
 
-.skills{
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+.skills {
     background: linear-gradient(180deg, #0c0c1d, #111132);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    @include mobile{
+    @include mobile {
         width: 100%;
         padding: 10px;
         flex-direction: column;
     }
 
-    .textContainer{
+    .textContainer {
         flex: 1;
         align-self: flex-end;
         display: flex;
         align-items: center;
         gap: 20px;
 
-        p{
+        p {
             font-weight: 100px;
             font-size: 15px;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: gray;
             text-align: right;
-            
         }
-        hr{
+        hr {
             width: 400px;
             border: none;
             border-top: 0.5px solid gray;
             text-align: right;
         }
 
-        @include mobile{
+        @include mobile {
             display: none;
-        }   
+        }
     }
 
-    .titleContainer{
+    .titleContainer {
         flex: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .title{
+        .title {
             display: flex;
             gap: 30px;
             align-items: center;
             margin-bottom: 10px;
-            
-            img{
+
+            img {
                 width: 300px;
                 height: 70px;
                 border-radius: 50px;
                 object-fit: cover;
 
-                @include mobile{
+                @include mobile {
                     display: none;
                 }
             }
 
-            h1{
+            h1 {
                 font-size: 60px;
                 font-weight: 500;
                 cursor: pointer;
-                font-family:Verdana, Geneva, Tahoma, sans-serif;
-                @include mobile{
-                    margin-top: 40px;
-                    font-size: 20px; 
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-                    
+                @include mobile {
+                    margin-top: 40px;
+                    font-size: 20px;
                 }
             }
 
-            button{
+            button {
                 width: 250px;
                 height: 70px;
                 border-radius: 40px;
@@ -87,60 +90,57 @@
                 background-color: orange;
                 cursor: pointer;
 
-                @include mobile{
+                @include mobile {
                     display: none;
                 }
             }
 
-            .spantitle{
-                
-                font-family:'Courier New', Courier, monospace;
+            .spantitle {
+                font-family: 'Courier New', Courier, monospace;
             }
         }
     }
 
-    .listContainer{
-
-        @include mobile{
-            width: 100%;
-            padding: 10px;
-            flex-direction: column;
-        }
-        
+    .listContainer {
         display: flex;
-        flex: 2;
+        flex-wrap: wrap; // Wrap items to multiple rows
+        justify-content: center;
+        gap: 20px; // Space between items
         max-width: 1366px;
         margin: auto;
-        align-items:flex-start;
+        align-items: flex-start;
         text-align: center;
 
-        .box{
-            padding: 40px;
+        .box {
+            width: 150px; // Set width to control items per row
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            
 
-            @include mobile{
-                display: none;
+            @include mobile {
+                width: 100%;
+                padding: 2px;
+                display: flex;
                 
             }
 
-            img{
-                margin-top: -35px;
+            img {
+                margin-top: -15px;
                 width: 80px;
                 height: 80px;
                 margin-bottom: 10px;
 
-                @include mobile{
+                @include mobile {
                     display: none;
                 }
             }
 
-            h1{
+            h1 {
                 font-family: cursive;
+                font-size: 16px;
             }
         }
     }
